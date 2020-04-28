@@ -9,3 +9,5 @@
 
 	var map = new naver.maps.Map('map', mapOptions);
 </script>
+
+<label id="num_text">Loading...</label>
