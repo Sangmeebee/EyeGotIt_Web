@@ -1,11 +1,11 @@
+var database = firebase.database();
+var rootRef = database.ref('aaa');
 
-const database = firebase.database();
-const rootRef = database.ref('aaa');
-
-
-var num;
+var latitude;
+var longitude;
 rootRef.child('currentLocation').on('value', snapshot =>{
-	num =  snapshot.val().sLatitude;
-	num_text.innerHTML = num;
+	latitude =  snapshot.val().sLatitude;
+	longitude =  snapshot.val().sLongitude;
+	
+	num_text.innerHTML = latitude+" , "+longitude;
 });
-

@@ -74,6 +74,31 @@
 <link href="<c:url value="/resources/css/blog.css"/>" rel="stylesheet">
 </head>
 <body>
+	<!-- The core Firebase JS SDK is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.14.4/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script
+		src="https://www.gstatic.com/firebasejs/7.14.4/firebase-database.js"></script>
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey : "AIzaSyBWYIfhCcO87NZVyTrm8Q4R_4CUaRhS0C8",
+			authDomain : "answertoyou-2a6c5.firebaseapp.com",
+			databaseURL : "https://answertoyou-2a6c5.firebaseio.com",
+			projectId : "answertoyou-2a6c5",
+			storageBucket : "answertoyou-2a6c5.appspot.com",
+			messagingSenderId : "879719861256",
+			appId : "1:879719861256:web:16e6c23f538040fd2315bd",
+			measurementId : "G-PDE2KDK3GD"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+	</script>
+
+
 	<div class="container">
 		<tiles:insertAttribute name="menu" />
 		<tiles:insertAttribute name="body" />
@@ -88,28 +113,8 @@
 		crossorigin="anonymous"></script>
 
 
-	<!-- The core Firebase JS SDK is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
-	<script
-		src="https://www.gstatic.com/firebasejs/7.14.2/firebase-database.js"></script>
-	<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
 
-	<script>
-		// Your web app's Firebase configuration
-		var firebaseConfig = {
-			apiKey : "AIzaSyBWYIfhCcO87NZVyTrm8Q4R_4CUaRhS0C8",
-			authDomain : "answertoyou-2a6c5.firebaseapp.com",
-			databaseURL : "https://answertoyou-2a6c5.firebaseio.com",
-			projectId : "answertoyou-2a6c5",
-			storageBucket : "answertoyou-2a6c5.appspot.com",
-			messagingSenderId : "879719861256",
-			appId : "1:879719861256:web:16e6c23f538040fd2315bd"
-		};
-		// Initialize Firebase
-		firebase.initializeApp(firebaseConfig);
-	</script>
 	<script src="<c:url value = "/resources/js/firebase_function.js"/>"></script>
-	
+
 </body>
 </html>
