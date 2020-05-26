@@ -13,8 +13,8 @@
    <small class="d-block text-right mt-3"> 
       <a href="#">All updates</a>
    </small>
+   <!-- 아 뭐야앙~ -->
 </div>
-
 
    <script>
       var databaseRoot = firebase.database().ref();
@@ -35,8 +35,6 @@
          snapshot.forEach(function(childSnapshot) {
             var childKey = childSnapshot.key;
             var childData = childSnapshot.val();
-            console.log("ㅎ"+childData);
-            
 
             childSnapshot.forEach(function(grandchildSnapshot) {
 
@@ -73,9 +71,11 @@
          
          
          for (var i = 0; i < currentUserArray.length; i++) {
-        	 var r = Math.round(Math.random() * 255); 
+            
+            var r = Math.round(Math.random() * 255); 
              var g = Math.round(Math.random() * 255);
              var b = Math.round(Math.random() * 255);
+            
             var newDiv = document.createElement("div");
             newDiv.setAttribute('class','media text-muted pt-3');
             
@@ -126,3 +126,5 @@
          
       });
    </script>
+
+   

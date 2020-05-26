@@ -25,9 +25,11 @@ public class HomeController {
 		return "home";
 	}
 	
+
 	@GetMapping(value = "/map/{id}")
 	public String map(@PathVariable String id, Model model) {
 		model.addAttribute("id", id);
+
 
 		return "map";
 	}
