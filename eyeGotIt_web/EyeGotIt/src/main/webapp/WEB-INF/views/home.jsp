@@ -1,34 +1,18 @@
-<!-- 지도  -->
-<div id="map" style="width: 100%; height: 800px;"></div>
-<script>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+
+
+<div class="my-3 p-3 bg-white rounded shadow-sm">
 	
-	var database = firebase.database();
-	var rootRef = database.ref('aaa');
-	rootRef.child('currentLocation').on('value', snapshot =>{
+	<h6 class="border-bottom border-gray pb-2 mb-0">현재 사용자</h6>
+
+	<div id="rootDiv">
+		<!-- 동적 생성하는 부분 -->
+	</div>
 		
-		var latitude =  snapshot.val().sLatitude;
-		var longitude =  snapshot.val().sLongitude;
-		
-		var mapOptions = {
-				center : new naver.maps.LatLng(latitude, longitude),
-				zoom : 18
-			};
-
-		var map = new naver.maps.Map('map', mapOptions);			
-		
-		var marker = new naver.maps.Marker({
-			position : new naver.maps.LatLng(latitude, longitude),
-			map : map
-		});
-	});
+	<small class="d-block text-right mt-3"> 
+		<a href="#">All updates</a>
+	</small>
+</div>
 	
-	
-
-	//마커 
-	
-</script>
-<label id="num_text">Loading...</label>
-
-
-
 
