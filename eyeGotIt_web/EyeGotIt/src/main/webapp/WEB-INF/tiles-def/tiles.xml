@@ -15,5 +15,10 @@
     <put-attribute name="body" value="/WEB-INF/views/home.jsp" />
   </definition>
   
+  <definition name="map" extends="base">
+    <put-attribute name="title" value="estore HomePage" />
+    <put-attribute name="body" value="/WEB-INF/views/map.jsp" />
+  </definition>
+  
   
 </tiles-definitions>
